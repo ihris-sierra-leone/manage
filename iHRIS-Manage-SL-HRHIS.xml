@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="ihris-manage-site">
+  <metadata>
+    <displayName>iHRIS Manage - Sierra Leone</displayName>
+    <category>Site</category>
+    <description>the iHRIS Manage Site for MOH Sierra Leone</description>
+    <creator>Intrahealth Informatics</creator>
+    <email>support@zalongwa.com</email>
+    <link>https://launchpad.net/ihris-manage</link>
+    <version>4.3.7</version>
+    <path name="configs">
+      <value>./configs</value>
+    </path>
+    <path name="classes">
+      <value>./lib</value>
+    </path>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <path name="css">
+      <value>./css</value>
+    </path>
+    <path name="scripts">
+      <value>./scripts</value>
+    </path>
+    <path name="modules">
+      <value>./modules</value>
+    </path>
+    <path name="images">
+      <value>./images</value>
+    </path>
+    <requirement name="zLetters">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="UserAccess">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="tasks-roles">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="ihris-manage">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="customized_disciplinary_action">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="customised-LastPromotion">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="CustomReports-full-staff">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="CustomReports-full-staff_directory">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="CustomReports-full-master_staff_rel">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="CustomReports-full-report1">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="Advances">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="county-data">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="PersPosition">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="zLeave">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="zLeaveReport">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="changePosition">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="staff_norm">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="CustomReports-full-attrition">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <!--  
+    <requirement name="CustomReports">
+      <atLeast version="4.2" />
+      <lessThan version="4.3" />
+    </requirement>  
+    <requirement name='CustomReports-full-search_people'>
+      <atLeast version='4.2'/>
+      <lessThan version='4.3'/>
+    </requirement>
+    <requirement name='CustomReports-full-staff'>
+      <atLeast version='4.2'/>
+      <lessThan version='4.3'/>
+    </requirement>  
+    <requirement name="customised-ConfirmationToService">
+      <atLeast version="4.2"/>
+      <lessThan version="4.3"/>
+    </requirement>      
+    <requirement name="cust-Facility">
+      <atLeast version="4.2"/>
+      <lessThan version="4.3"/>
+    </requirement>
+    <requirement name='customised-Leave'>
+      <atLeast version="4.2"/>
+      <lessThan version="4.3"/>
+     
+   -->
+    <requirement name="customised-DutyPost">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="CustomReports-full-start-worflow-report">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <requirement name="customised-ConfirmationToService">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+    <enable name="csd-data-address-type" />
+    <enable name="csd-data-dow" />
+    <enable name="csd-data-gender" />
+    <enable name="csd-data-provider-status" />
+    <enable name="csd-data-provider-data-model" />
+    <enable name="IL-HWR" />
+    <enable name="mHero" />
+    <enable name="csd-search" />
+    <enable name="CSD-data" />
+    <enable name="default-locales" />
+    <enable name="PersonContact" />
+    <enable name="ihris-manage-confirmation" />
+    <enable name="customised-PersonDemographic" />
+    <enable name="PersonPassportPhoto" />
+    <enable name="PersonResume" />
+    <enable name="PersonEducation" />
+    <enable name="PersonEmployment" />
+    <enable name="PersonID" />
+    <enable name="PersonLanguage" />
+    <enable name="stub" />
+    <enable name="messageBox" />
+    <enable name="messageNotice" />
+    <enable name="messageHandler" />
+    <enable name="name-Titles" />
+    <enable name="person-Information" />
+    <enable name="customised-Village" />
+    <enable name="establishment" />
+    <enable name="customised-DutyPost" />
+    <enable name="customised-LastPromotion" />
+    <!-- <enable name="training-course" /> -->
+    <enable name="TrainingCourse" />
+  <!--  <enable name="training-course" />-->
+    <enable name="manage-training-institution" />
+    <enable name="ihris-manage-MassDeleteFacility" />
+    <enable name="ihris-common-MassDeletePerson" />
+    <enable name="customised-Import" />
+    <enable name="professional-Qualifications" />
+    <enable name="customised-Village" />
+    <enable name="dependents" />
+    <enable name="customised-dependents" />
+    <enable name="disciplinary_action" />
+    <enable name="customised-Job" />
+    <enable name="PersonPassportPhoto" />
+    <enable name="ActingPosition" />
+    <enable name="nextOfKin" />
+    <enable name="Document" />
+    <enable name="magicDataBrowser" />
+    <enable name="stub" />
+    <priority>400</priority>
+  </metadata>
+  <configurationGroup name="ihris-manage-site" path="/">
+    <displayName>iHRIS Manage Site</displayName>
+    <status>advanced:false</status>
+    <configurationGroup name="feedback">
+      <displayName>Feedback Information</displayName>
+      <status>required:false</status>
+      <configuration name="email" path="to" values="single" type="string">
+        <displayName>Email Address</displayName>
+        <value>helpdesk@healh.gov.sl</value>
+      </configuration>
+      <configuration name="subject" values="single" locale="en_US" type="string">
+        <displayName>Subject Line</displayName>
+        <value>iHRIS Manage</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="cache_times">
+      <displayName>Cache Times</displayName>
+      <description>Override caching times for this site.</description>
+      <status>advanced:true</status>
+      <configuration name="stale" path="/I2CE/update/times/stale" values="single" type="string">
+        <displayName>Stale Time</displayName>
+        <description>The time in seconds we wait until we check that the configuration files for the system and the modules are up to date. Defaults to 10. If negative, we check the system files on each page request</description>
+        <status>required:true</status>
+        <value>-1</value>
+        <enable name="dependent-Type" />
+      </configuration>
+      <configuration name="stale_time" path="/I2CE/fileSearch/stale_time" values="single" type="string">
+        <displayName>Stale Time</displayName>
+        <description>The time in seconds until a file found in the file search utility is considered stale. If stale, it will search for the file, if not stale, it will use the previously found location of the file (it will cache the file location). If negative, then we do not cache the file location.</description>
+        <status>required:true</status>
+        <value>1800</value>
+      </configuration>
+      <configuration name="cache_time" path="/modules/FileDump/cache_time" values="single" type="string">
+        <displayName>Cache Time</displayName>
+        <description>The time (in minutes) to cache content</description>
+        <status>required:true</status>
+        <value>60</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="template">
+      <displayName>Template Information</displayName>
+      <description>Various Default Information About The Templating System</description>
+      <status>advanced:false</status>
+      <status>required:true</status>
+      <configuration name="prefix_title" values="single" locale="en_US" type="string">
+        <displayName>Page title prefix</displayName>
+        <description>Page titile prefix</description>
+        <value>HRHIS Database</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="pdf_options" path="/modules/report-pdf/PDF/display-options">
+      <displayName>PDF Options</displayName>
+      <status>visible:false</status>
+      <configurationGroup name="header">
+        <displayName>Header Options</displayName>
+        <configuration name="text" locale="en_US" values="single" type="string">
+          <displayName>Header Text</displayName>
+          <value>HRHIS Database</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>
