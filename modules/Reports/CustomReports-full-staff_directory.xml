@@ -1,0 +1,1676 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="CustomReports-full-staff_directory">
+  <metadata>
+    <displayName>Relationship: staff_directory</displayName>
+    <description>Relationship 'staff_directory' and all reports and report views.</description>
+    <version>4.3.0</version>
+    <requirement name="CustomReports-full-staff">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+  </metadata>
+  <erase path="/modules/CustomReports/relationships/staff_directory">
+    <lessThan version="4.0.11.2016.07.21" />
+  </erase>
+  <erase path="/modules/CustomReports/reports/staff_directory">
+    <lessThan version="4.0.11.2016.07.21" />
+  </erase>
+  <erase path="/modules/CustomReports/reportViews/staff_directory">
+    <lessThan version="4.0.11.2016.07.21" />
+  </erase>
+  <configurationGroup name="CustomReports-full-staff_directory" path="/modules/CustomReports">
+    <configurationGroup name="staff_directory" path="//modules/CustomReports/relationships/staff_directory">
+      <displayName>Export</displayName>
+      <configuration name="display_name" locale="en_US" values="single" type="string">
+        <displayName>Display Name</displayName>
+        <value>staff_directory</value>
+      </configuration>
+      <configuration name="form" values="single" type="string">
+        <displayName>Form</displayName>
+        <value>person</value>
+      </configuration>
+      <configurationGroup name="joins">
+        <displayName>Joins</displayName>
+        <configurationGroup name="current_person_position">
+          <displayName>Current Person Position</displayName>
+          <configuration name="display_name" locale="en_US" values="single" type="string">
+            <displayName>Display Name</displayName>
+            <value>current_person_position</value>
+          </configuration>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configuration name="form" values="single" type="string">
+            <displayName>Form</displayName>
+            <value>person_position</value>
+          </configuration>
+          <configurationGroup name="joins">
+            <displayName>Joins</displayName>
+            <configurationGroup name="position">
+              <displayName>Position</displayName>
+              <configuration name="display_name" locale="en_US" values="single" type="string">
+                <displayName>Display Name</displayName>
+                <value>current_position</value>
+              </configuration>
+              <configuration name="form" values="single" type="string">
+                <displayName>Form</displayName>
+                <value>position</value>
+              </configuration>
+              <configurationGroup name="joins">
+                <displayName>Joins</displayName>
+                <configurationGroup name="facility">
+                  <displayName>Facility</displayName>
+                  <configuration name="display_name" locale="en_US" values="single" type="string">
+                    <displayName>Display Name</displayName>
+                    <value>current_facility</value>
+                  </configuration>
+                  <configuration name="form" values="single" type="string">
+                    <displayName>Form</displayName>
+                    <value>facility</value>
+                  </configuration>
+                  <configurationGroup name="joins">
+                    <displayName>Joins</displayName>
+                    <configurationGroup name="district">
+                      <displayName>District</displayName>
+                      <configuration name="display_name" locale="en_US" values="single" type="string">
+                        <displayName>Display Name</displayName>
+                        <value>current_district</value>
+                      </configuration>
+                      <configuration name="form" values="single" type="string">
+                        <displayName>Form</displayName>
+                        <value>district</value>
+                      </configuration>
+                      <configurationGroup name="join_data">
+                        <displayName>Join Data</displayName>
+                        <configuration name="field" values="single" type="string">
+                          <displayName>Field</displayName>
+                          <value>location</value>
+                        </configuration>
+                      </configurationGroup>
+                      <configuration name="join_style" values="single" type="string">
+                        <displayName>Join Style</displayName>
+                        <value>parent_field</value>
+                      </configuration>
+                      <configuration name="limit_one" values="single" type="string">
+                        <displayName>Limit One</displayName>
+                        <value>1</value>
+                      </configuration>
+                    </configurationGroup>
+                  </configurationGroup>
+                  <configurationGroup name="join_data">
+                    <displayName>Join Data</displayName>
+                    <configuration name="field" values="single" type="string">
+                      <displayName>Field</displayName>
+                      <value>facility</value>
+                    </configuration>
+                  </configurationGroup>
+                  <configuration name="join_style" values="single" type="string">
+                    <displayName>Join Style</displayName>
+                    <value>parent_field</value>
+                  </configuration>
+                  <configuration name="limit_one" values="single" type="string">
+                    <displayName>Limit One</displayName>
+                    <value>1</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configurationGroup name="join_data">
+                <displayName>Join Data</displayName>
+                <configuration name="field" values="single" type="string">
+                  <displayName>Field</displayName>
+                  <value>position</value>
+                </configuration>
+              </configurationGroup>
+              <configuration name="join_style" values="single" type="string">
+                <displayName>Join Style</displayName>
+                <value>parent_field</value>
+              </configuration>
+              <configuration name="limit_one" values="single" type="string">
+                <displayName>Limit One</displayName>
+                <value>1</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="current_salary">
+              <displayName>Current Salary</displayName>
+              <configuration name="display_name" locale="en_US" values="single" type="string">
+                <displayName>Display Name</displayName>
+                <value>Current Salary</value>
+              </configuration>
+              <configuration name="form" values="single" type="string">
+                <displayName>Form</displayName>
+                <value>salary</value>
+              </configuration>
+              <configuration name="join_style" values="single" type="string">
+                <displayName>Join Style</displayName>
+                <value>child</value>
+              </configuration>
+              <configuration name="limit_one" values="single" type="string">
+                <displayName>Limit One</displayName>
+                <value>1</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configurationGroup name="join_data">
+            <displayName>Join Data</displayName>
+            <configuration name="displaystyle" values="single" type="string">
+              <displayName>Displaystyle</displayName>
+              <value>default</value>
+            </configuration>
+          </configurationGroup>
+          <configuration name="join_style" values="single" type="string">
+            <displayName>Join Style</displayName>
+            <value>child</value>
+          </configuration>
+          <configuration name="limit_one" values="single" type="string">
+            <displayName>Limit One</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="where">
+            <displayName>Where</displayName>
+            <configuration name="field" values="single" type="string">
+              <displayName>Field</displayName>
+              <value>end_date</value>
+            </configuration>
+            <configuration name="operator" values="single" type="string">
+              <displayName>Operator</displayName>
+              <value>FIELD_LIMIT</value>
+            </configuration>
+            <configuration name="style" values="single" type="string">
+              <displayName>Style</displayName>
+              <value>null</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="demographic">
+          <displayName>Demographic</displayName>
+          <configuration name="display_name" locale="en_US" values="single" type="string">
+            <displayName>Display Name</displayName>
+            <value>Demographic</value>
+          </configuration>
+          <configuration name="form" values="single" type="string">
+            <displayName>Form</displayName>
+            <value>demographic</value>
+          </configuration>
+          <configuration name="join_style" values="single" type="string">
+            <displayName>Join Style</displayName>
+            <value>child</value>
+          </configuration>
+          <configuration name="limit_one" values="single" type="string">
+            <displayName>Limit One</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="first_person_position">
+          <displayName>First Person Position</displayName>
+          <configuration name="display_name" locale="en_US" values="single" type="string">
+            <displayName>Display Name</displayName>
+            <value>first_person_position</value>
+          </configuration>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configuration name="form" values="single" type="string">
+            <displayName>Form</displayName>
+            <value>person_position</value>
+          </configuration>
+          <configurationGroup name="joins">
+            <displayName>Joins</displayName>
+            <configurationGroup name="starting_salary">
+              <displayName>Starting Salary</displayName>
+              <configuration name="display_name" locale="en_US" values="single" type="string">
+                <displayName>Display Name</displayName>
+                <value>Starting Salary</value>
+              </configuration>
+              <configuration name="form" values="single" type="string">
+                <displayName>Form</displayName>
+                <value>salary</value>
+              </configuration>
+              <configuration name="join_style" values="single" type="string">
+                <displayName>Join Style</displayName>
+                <value>child</value>
+              </configuration>
+              <configuration name="limit_one" values="single" type="string">
+                <displayName>Limit One</displayName>
+                <value>1</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="first_position">
+              <displayName>First Position</displayName>
+              <configuration name="display_name" locale="en_US" values="single" type="string">
+                <displayName>Display Name</displayName>
+                <value>First Position</value>
+              </configuration>
+              <configuration name="form" values="single" type="string">
+                <displayName>Form</displayName>
+                <value>position</value>
+              </configuration>
+              <configurationGroup name="join_data">
+                <displayName>Join Data</displayName>
+                <configuration name="field" values="single" type="string">
+                  <displayName>Field</displayName>
+                  <value>position</value>
+                </configuration>
+              </configurationGroup>
+              <configuration name="join_style" values="single" type="string">
+                <displayName>Join Style</displayName>
+                <value>parent_field</value>
+              </configuration>
+              <configuration name="limit_one" values="single" type="string">
+                <displayName>Limit One</displayName>
+                <value>1</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configurationGroup name="join_data">
+            <displayName>Join Data</displayName>
+            <configuration name="displaystyle" values="single" type="string">
+              <displayName>Displaystyle</displayName>
+              <value>default</value>
+            </configuration>
+          </configurationGroup>
+          <configuration name="join_style" values="single" type="string">
+            <displayName>Join Style</displayName>
+            <value>child</value>
+          </configuration>
+          <configuration name="limit_one" values="single" type="string">
+            <displayName>Limit One</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="where">
+            <displayName>Where</displayName>
+            <configuration name="style" values="single" type="string">
+              <displayName>Style</displayName>
+              <value>min_parent_form</value>
+            </configuration>
+            <configuration name="operator" values="single" type="string">
+              <displayName>Operator</displayName>
+              <value>FIELD_LIMIT</value>
+            </configuration>
+            <configuration name="field" values="single" type="string">
+              <displayName>Field</displayName>
+              <value>start_date</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="nassit_no">
+          <displayName>Nassit No</displayName>
+          <configuration name="display_name" locale="en_US" values="single" type="string">
+            <displayName>Display Name</displayName>
+            <value>NASSIT NO</value>
+          </configuration>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configuration name="form" values="single" type="string">
+            <displayName>Form</displayName>
+            <value>person_id</value>
+          </configuration>
+          <configurationGroup name="join_data">
+            <displayName>Join Data</displayName>
+            <configuration name="displaystyle" values="single" type="string">
+              <displayName>Displaystyle</displayName>
+              <value>default</value>
+            </configuration>
+          </configurationGroup>
+          <configuration name="join_style" values="single" type="string">
+            <displayName>Join Style</displayName>
+            <value>child</value>
+          </configuration>
+          <configuration name="limit_one" values="single" type="string">
+            <displayName>Limit One</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="where">
+            <displayName>Where</displayName>
+            <configurationGroup name="data">
+              <displayName>Data</displayName>
+              <configuration name="value" values="single" type="string">
+                <displayName>Value</displayName>
+                <value>id_type|2</value>
+              </configuration>
+            </configurationGroup>
+            <configuration name="field" values="single" type="string">
+              <displayName>Field</displayName>
+              <value>id_type</value>
+            </configuration>
+            <configuration name="operator" values="single" type="string">
+              <displayName>Operator</displayName>
+              <value>FIELD_LIMIT</value>
+            </configuration>
+            <configuration name="style" values="single" type="string">
+              <displayName>Style</displayName>
+              <value>equals</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="person_work_contact">
+          <displayName>Person Work Contact</displayName>
+          <configuration name="display_name" locale="en_US" values="single" type="string">
+            <displayName>Display Name</displayName>
+            <value>Work Contact</value>
+          </configuration>
+          <configuration name="form" values="single" type="string">
+            <displayName>Form</displayName>
+            <value>person_contact_work</value>
+          </configuration>
+          <configuration name="join_style" values="single" type="string">
+            <displayName>Join Style</displayName>
+            <value>child</value>
+          </configuration>
+          <configuration name="limit_one" values="single" type="string">
+            <displayName>Limit One</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="pin_code">
+          <displayName>Pin Code</displayName>
+          <configuration name="display_name" locale="en_US" values="single" type="string">
+            <displayName>Display Name</displayName>
+            <value>Pin Code</value>
+          </configuration>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configuration name="form" values="single" type="string">
+            <displayName>Form</displayName>
+            <value>person_id</value>
+          </configuration>
+          <configurationGroup name="join_data">
+            <displayName>Join Data</displayName>
+            <configuration name="displaystyle" values="single" type="string">
+              <displayName>Displaystyle</displayName>
+              <value>default</value>
+            </configuration>
+          </configurationGroup>
+          <configuration name="join_style" values="single" type="string">
+            <displayName>Join Style</displayName>
+            <value>child</value>
+          </configuration>
+          <configuration name="limit_one" values="single" type="string">
+            <displayName>Limit One</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="where">
+            <displayName>Where</displayName>
+            <configurationGroup name="data">
+              <displayName>Data</displayName>
+              <configuration name="value" values="single" type="string">
+                <displayName>Value</displayName>
+                <value>id_type|1</value>
+              </configuration>
+            </configurationGroup>
+            <configuration name="field" values="single" type="string">
+              <displayName>Field</displayName>
+              <value>id_type</value>
+            </configuration>
+            <configuration name="operator" values="single" type="string">
+              <displayName>Operator</displayName>
+              <value>FIELD_LIMIT</value>
+            </configuration>
+            <configuration name="style" values="single" type="string">
+              <displayName>Style</displayName>
+              <value>equals</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="staff_directory" path="//modules/CustomReports/reports/staff_directory">
+      <displayName>Export</displayName>
+      <configurationGroup name="meta">
+        <displayName>Meta</displayName>
+        <configuration name="category" values="single" type="string">
+          <displayName>Category</displayName>
+          <value>Staff Reports</value>
+        </configuration>
+        <configuration name="display_name" locale="en_US" values="single" type="string">
+          <displayName>Display Name</displayName>
+          <value>Staff Directory</value>
+        </configuration>
+      </configurationGroup>
+      <configuration name="relationship" values="single" type="string">
+        <displayName>Relationship</displayName>
+        <value>staff_directory</value>
+      </configuration>
+      <configurationGroup name="reporting_forms">
+        <displayName>Reporting Forms</displayName>
+        <configurationGroup name="current_person_position">
+          <displayName>Current Person Position</displayName>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="position">
+              <displayName>Position</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Current Position Hide</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Current Position</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="start_date">
+              <displayName>Start Date</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Date Of Last Appointment</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Date Of Last Appointment</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="current_salary">
+          <displayName>Current Salary</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="salary">
+              <displayName>Salary</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Current Salary</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="demographic">
+          <displayName>Demographic</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="birth_date">
+              <displayName>Birth Date</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Date of Birth</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Date of Birth</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="district">
+          <displayName>District</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="name">
+              <displayName>Name</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Facility District</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>District Name</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="region">
+              <displayName>Region</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Facility Region</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Region</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="facility">
+          <displayName>Facility</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="name">
+              <displayName>Name</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Facility</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="first_person_position">
+          <displayName>First Person Position</displayName>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="position">
+              <displayName>Position</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>First Position Hide</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>First Position</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="start_date">
+              <displayName>Start Date</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Date Of First Appointment</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Date Of First Appointment</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="first_position">
+          <displayName>First Position</displayName>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="title">
+              <displayName>Title</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>First Position</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="nassit_no">
+          <displayName>Nassit No</displayName>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="id_num">
+              <displayName>Id Num</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>NASSIT NO.</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>NASSIT NO.</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="person_work_contact">
+          <displayName>Person Work Contact</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="telephone">
+              <displayName>Telephone</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Work Telephone</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="email">
+              <displayName>Email</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Work Email</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="pin_code">
+          <displayName>Pin Code</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="id_num">
+              <displayName>Id Num</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Pin Code</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Equals Person Identification Identification Number</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="position">
+          <displayName>Position</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="department">
+              <displayName>Department</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Department</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Department</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="facility">
+              <displayName>Facility</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Facility Hide</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Facility</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="title">
+              <displayName>Title</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Current Position</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="primary_form">
+          <displayName>Primary Form</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="academic_edu_lev">
+              <displayName>Academic Edu Lev</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Highest Education Level</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Highest Education Level</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="firstname">
+              <displayName>Firstname</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>First Name</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>First Name</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="othername">
+              <displayName>Othername</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Other Names</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="residence">
+              <displayName>Residence</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Residence</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Residence</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+            <configurationGroup name="surname">
+              <displayName>Surname</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Surname</value>
+              </configuration>
+              <configurationGroup name="limits">
+                <displayName>Limits</displayName>
+                <configurationGroup name="equals">
+                  <displayName>Equals</displayName>
+                  <configuration name="allow_pivot" values="single" type="string">
+                    <displayName>Allow Pivot</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="enabled" values="single" type="string">
+                    <displayName>Enabled</displayName>
+                    <value>1</value>
+                  </configuration>
+                  <configuration name="header" locale="en_US" values="single" type="string">
+                    <displayName>Header</displayName>
+                    <value>Surname</value>
+                  </configuration>
+                  <configuration name="pivot" values="single" type="string">
+                    <displayName>Pivot</displayName>
+                    <value>0</value>
+                  </configuration>
+                </configurationGroup>
+              </configurationGroup>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="starting_salary">
+          <displayName>Starting Salary</displayName>
+          <configurationGroup name="fields">
+            <displayName>Fields</displayName>
+            <configurationGroup name="salary">
+              <displayName>Salary</displayName>
+              <configuration name="enabled" values="single" type="string">
+                <displayName>Enabled</displayName>
+                <value>1</value>
+              </configuration>
+              <configuration name="form_display" values="single" type="string">
+                <displayName>Form Display</displayName>
+                <value>0</value>
+              </configuration>
+              <configuration name="header" locale="en_US" values="single" type="string">
+                <displayName>Header</displayName>
+                <value>Starting Salary</value>
+              </configuration>
+              <configuration name="link_type" values="single" type="string">
+                <displayName>Link Type</displayName>
+                <value>link</value>
+              </configuration>
+              <configuration name="target" values="single" type="string">
+                <displayName>Target</displayName>
+                <value>_blank</value>
+              </configuration>
+            </configurationGroup>
+          </configurationGroup>
+          <configuration name="drop_empty" values="single" type="string">
+            <displayName>Drop Empty</displayName>
+            <value>0</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="staff_directory" path="//modules/CustomReports/reportViews/staff_directory">
+      <displayName>Export</displayName>
+      <configuration name="disable" values="single" type="string">
+        <displayName>Disable</displayName>
+        <value>0</value>
+      </configuration>
+      <configuration name="display_name" locale="en_US" values="single" type="string">
+        <displayName>Display Name</displayName>
+        <value>Staff Directory</value>
+      </configuration>
+      <configuration name="display_order" values="single" type="string">
+        <displayName>Display Order</displayName>
+        <value>primary_form+firstname,primary_form+othername,primary_form+surname,demographic+birth_date,pin_code+id_num,nassit_no+id_num,first_person_position+position,first_position+title,first_person_position+start_date,starting_salary+salary,position+title,current_person_position+position,current_person_position+start_date,current_salary+salary,primary_form+academic_edu_lev,position+department,facility+name,position+facility,district+name,district+region,primary_form+residence,person_work_contact+email,person_work_contact+telephone</value>
+      </configuration>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configurationGroup name="current_person_position+start_date">
+          <displayName>Current Person Position Start Date</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="current_salary+salary">
+          <displayName>Current Salary Salary</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="demographic+birth_date">
+          <displayName>Demographic Birth Date</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="district+name">
+          <displayName>District Name</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="district+region">
+          <displayName>District Region</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="facility+name">
+          <displayName>Facility Name</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="first_person_position+start_date">
+          <displayName>First Person Position Start Date</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="first_position+title">
+          <displayName>First Position Title</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="nassit_no+id_num">
+          <displayName>Nassit No Id Num</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="person_work_contact+email">
+          <displayName>Person Work Contact Email</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="person_work_contact+telephone">
+          <displayName>Person Work Contact Telephone</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="pin_code+id_num">
+          <displayName>Pin Code Id Num</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="position+department">
+          <displayName>Position Department</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="position+title">
+          <displayName>Position Title</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="primary_form+academic_edu_lev">
+          <displayName>Primary Form Academic Edu Lev</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="primary_form+firstname">
+          <displayName>Primary Form Firstname</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="primary_form+othername">
+          <displayName>Primary Form Othername</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="primary_form+residence">
+          <displayName>Primary Form Residence</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="primary_form+surname">
+          <displayName>Primary Form Surname</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+        <configurationGroup name="starting_salary+salary">
+          <displayName>Starting Salary Salary</displayName>
+          <configuration name="aggregate" values="single" type="string">
+            <displayName>Aggregate</displayName>
+            <value>none</value>
+          </configuration>
+          <configuration name="enabled" values="single" type="string">
+            <displayName>Enabled</displayName>
+            <value>1</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configuration name="report" values="single" type="string">
+        <displayName>Report</displayName>
+        <value>staff_directory</value>
+      </configuration>
+      <configuration name="total" values="single" type="string">
+        <displayName>Total</displayName>
+        <value>0</value>
+      </configuration>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

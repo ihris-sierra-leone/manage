@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="zLetters">
+  <metadata>
+    <displayName>Standard Letters</displayName>
+    <description>Standard Letters</description>
+    <version>4.3.1</version>
+    <requirement name='PrintedFormsODT'>
+      <atLeast version='4.3'/>
+      <lessThan version='4.4'/>
+    </requirement>
+<!--    <requirement name="CustomReports-PrintedReportsODT">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>-->
+    <path name='ODT_TEMPLATES'>
+      <value>./letters</value>
+    </path>
+
+  </metadata>
+  <configurationGroup name="zLetters" path="/modules/PrintedForms/forms">
+    <configurationGroup name='leave'>
+      <configuration name="relationship">
+        <version>4.3.0</version>
+        <value>leave</value>
+      </configuration>
+      <configuration name="render">
+        <value>ODT</value>
+      </configuration>
+      <configuration name="archive">
+        <value>person</value>
+      </configuration>
+      <configuration name="displayName">
+        <value>Leave Application Letter</value>
+      </configuration>
+      <configuration name="template">
+        <value>LeaveLetter.odt</value>
+      </configuration>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

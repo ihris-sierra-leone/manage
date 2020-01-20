@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="marital-status">
+  <metadata>
+    <displayName>Marital Status</displayName>
+    <category>Customised Modules</category>
+    <description>Marital status of the employee: single, married, etc.</description>
+    <version>4.3.0</version>
+  </metadata>
+  <configurationGroup name="marital-status" path="/I2CE/formsData/forms/marital_status">
+    <displayName>Marital Status</displayName>
+    <version>4.1.0</version>
+    <configurationGroup name="1">
+      <displayName>1</displayName>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="i2ce_hidden" values="single" type="string">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name" values="single" type="string">
+          <displayName>Name</displayName>
+          <value>Single</value>
+        </configuration>
+      </configurationGroup>
+      <configuration name="last_modified" values="single" type="string">
+        <displayName>Last Modified</displayName>
+        <value>2013-04-12 18:05:08</value>
+      </configuration>
+      <configuration name="who" values="single" type="string">
+        <displayName>Who</displayName>
+        <value>53</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="2">
+      <displayName>2</displayName>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="i2ce_hidden" values="single" type="string">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name" values="single" type="string">
+          <displayName>Name</displayName>
+          <value>Married</value>
+        </configuration>
+      </configurationGroup>
+      <configuration name="last_modified" values="single" type="string">
+        <displayName>Last Modified</displayName>
+        <value>2013-04-12 18:05:21</value>
+      </configuration>
+      <configuration name="who" values="single" type="string">
+        <displayName>Who</displayName>
+        <value>53</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="3">
+      <displayName>3</displayName>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="i2ce_hidden" values="single" type="string">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name" values="single" type="string">
+          <displayName>Name</displayName>
+          <value>Divorced</value>
+        </configuration>
+      </configurationGroup>
+      <configuration name="last_modified" values="single" type="string">
+        <displayName>Last Modified</displayName>
+        <value>2013-04-12 18:05:34</value>
+      </configuration>
+      <configuration name="who" values="single" type="string">
+        <displayName>Who</displayName>
+        <value>53</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="4">
+      <displayName>4</displayName>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="i2ce_hidden" values="single" type="string">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name" values="single" type="string">
+          <displayName>Name</displayName>
+          <value>Widow</value>
+        </configuration>
+      </configurationGroup>
+      <configuration name="last_modified" values="single" type="string">
+        <displayName>Last Modified</displayName>
+        <value>2013-04-12 18:05:53</value>
+      </configuration>
+      <configuration name="who" values="single" type="string">
+        <displayName>Who</displayName>
+        <value>53</value>
+      </configuration>
+    </configurationGroup>
+    <configurationGroup name="5">
+      <displayName>4</displayName>
+      <configurationGroup name="fields">
+        <displayName>Fields</displayName>
+        <configuration name="i2ce_hidden" values="single" type="string">
+          <displayName>I2ce Hidden</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="name" values="single" type="string">
+          <displayName>Name</displayName>
+          <value>Widower</value>
+        </configuration>
+      </configurationGroup>
+      <configuration name="last_modified" values="single" type="string">
+        <displayName>Last Modified</displayName>
+        <value>2013-04-12 18:05:53</value>
+      </configuration>
+      <configuration name="who" values="single" type="string">
+        <displayName>Who</displayName>
+        <value>53</value>
+      </configuration>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

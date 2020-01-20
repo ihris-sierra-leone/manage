@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="customised-PersonDemographic">
+  <metadata>
+    <displayName>CUSTOMISED Person Demographic</displayName>
+    <category>CUSTOMISED Modules</category>
+    <description>The CUSTOMISED Person Demographic Module</description>
+    <creator>iHRIS Tanzania</creator>
+    <email>support@zalongwa.com</email>
+    <link>https://launchpad.net/ihris-manage</link>
+    <version>4.2.0</version>
+    <path name="configs">
+      <value>./configs</value>
+    </path>
+    <requirement name="Person">
+      <atLeast version="4.2" />
+    </requirement>
+    <requirement name="ihris-manage-PersonDemographic">
+      <atLeast version="4.2" />
+    </requirement>
+    <requirement name="customised-Disability">
+      <atLeast version="4.2" />
+    </requirement>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <priority>400</priority>
+  </metadata>
+  <configurationGroup name="customised-PersonDemographic" path="/I2CE">
+                <status>overwrite:true</status>
+    <configurationGroup name="forms" path="/modules/forms">
+      <configurationGroup name="forms">
+        <configurationGroup name="demographic">
+          <displayName>Demographic Information</displayName>
+          <description>The Demographic Information Form</description>
+          <configuration name="class" values="single">
+            <displayName>Class Name</displayName>
+            <description>The name of the class providing the form</description>
+            <value>customised_ManageDemographic</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <!-- end of /modules/forms/forms-->
+      <configurationGroup name="formClasses">
+        <configurationGroup name="customised_ManageDemographic">
+          <displayName>Configuration for the class 'customised_ManageDemographic'</displayName>
+          <configuration name="extends">
+            <displayName>The class this form extends</displayName>
+            <value>iHRIS_ManageDemographic</value>
+          </configuration>
+          <configurationGroup name="fields">
+            <displayName>The fields defined for this form</displayName>
+            <!--added this for religion-->
+         <configurationGroup name="religion">
+           <displayName>The field 'religion'</displayName>
+           <configuration name="formfield">
+             <displayName>The form field type</displayName>
+             <value>MAP</value>
+           </configuration>
+           <configurationGroup name="meta">
+             <configuration name="form" values="many">
+               <value>religion</value>
+             </configuration>
+             <configurationGroup name="display">
+                <configurationGroup name="default">
+                  <configuration name="fields">
+                    <version>4.2.0</version>
+                    <value>religion</value>
+                  </configuration>
+                </configurationGroup>
+             </configurationGroup>
+           </configurationGroup>
+           <configuration name="headers" type="delimited" locale="en_US">
+             <displayName>The headers for this field.</displayName>
+                <version>4.2.0</version>
+                <value>default:Religion</value>
+           </configuration>
+         </configurationGroup>
+         <!--religion-->
+            <!--added this for tribe-->
+         <configurationGroup name="tribe">
+           <displayName>The field 'tribe'</displayName>
+           <configuration name="formfield">
+             <displayName>The form field type</displayName>
+             <value>STRING_LINE</value>
+           </configuration>
+           <configuration name="headers" type="delimited" locale="en_US">
+             <displayName>The headers for this field.</displayName>
+             <version>4.2.0</version>
+             <value>default:Tribe</value>
+           </configuration>
+         </configurationGroup>
+         <!--tribe-->
+         <!-- added Sex field -->
+         <configurationGroup name="gender">
+           <displayName>The field 'gender'</displayName>
+           <version>4.2.0</version>
+           <configuration name="formfield">
+             <displayName>The form field type</displayName>
+             <value>MAP</value>
+          </configuration>
+          <configurationGroup name="meta">
+            <configuration name="form" values="many">
+             <value>gender</value>
+            </configuration>
+            <configurationGroup name="display">
+              <configurationGroup name="default">
+                <configuration name="fields">
+                  <version>4.2.0</version>
+                  <value>gender</value>
+                </configuration>
+            </configurationGroup>
+          </configurationGroup>
+         </configurationGroup>
+          <configuration name="headers" type="delimited" locale="en_US">
+            <displayName>The headers for this field.</displayName>
+              <value>default:Sex</value>
+          </configuration>
+        </configurationGroup>
+        <!-- Sex --->
+         <configurationGroup name="disability">
+           <displayName>The field 'disability'</displayName>
+           <version>4.2.0</version>
+           <configuration name="formfield">
+             <displayName>The form field type</displayName>
+             <value>MAP</value>
+          </configuration>
+          <configurationGroup name="meta">
+            <configuration name="form" values="many">
+             <value>disability</value>
+            </configuration>
+            <configurationGroup name="display">
+              <configurationGroup name="default">
+                <configuration name="fields">
+                  <version>4.2.0</version>
+                  <value>disability</value>
+                </configuration>
+            </configurationGroup>
+          </configurationGroup>
+         </configurationGroup>
+          <configuration name="headers" type="delimited" locale="en_US">
+            <displayName>The headers for this field.</displayName>
+              <value>default:Disability</value>
+          </configuration>
+        </configurationGroup>
+         <configurationGroup name="livingPositively">
+           <displayName>The field 'livingPositively'</displayName>
+           <configuration name="formfield">
+             <displayName>The form field type</displayName>
+             <value>YESNO</value>
+           </configuration>
+           <configuration name="headers" type="delimited" locale="en_US">
+             <displayName>The headers for this field.</displayName>
+             <version>4.2.0</version>
+             <value>default:Living Positively?</value>
+           </configuration>
+         </configurationGroup>
+         <configurationGroup name="diagDate">
+           <displayName>The field 'diagDate'</displayName>
+           <configuration name="formfield">
+             <displayName>The form field type</displayName>
+             <value>DATE_YMD</value>
+           </configuration>
+          <configuration name="default_eval">
+             <displayName>The form field type</displayName>
+             <value>I2CE_Date::blank()</value>
+           </configuration>
+           <configuration name="headers" type="delimited" locale="en_US">
+             <displayName>The headers for this field.</displayName>
+             <version>4.2.0</version>
+             <value>default:Date of Diagnosis</value>
+           </configuration>
+         </configurationGroup>
+       </configurationGroup>
+     </configurationGroup>
+   </configurationGroup>
+   <!-- end of /modules/forms/formClasses-->
+ </configurationGroup>
+ <!-- end of /modules/forms-->
+</configurationGroup>
+</I2CEConfiguration>

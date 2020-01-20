@@ -1,0 +1,420 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="search_all_peope_view">
+  <metadata>
+    <displayName>Search All People View</displayName>
+    <description>View Search All People</description>
+    <version>4.3.0</version>
+  </metadata>
+  <configurationGroup name="search_all_peope_view" path="//modules/CustomReports/reportViews/search_people">
+    <displayName>Export</displayName>
+    <version>4.2.2.24.2016.09.11</version>
+    <configuration name="default_display" values="single" type="string">
+      <displayName>Default Display</displayName>
+      <value>Default</value>
+    </configuration>
+    <configuration name="description" values="single" type="string">
+      <displayName>Description</displayName>
+      <value>Search all person records in the system.</value>
+    </configuration>
+    <configuration name="disable" values="single" type="string">
+      <displayName>Disable</displayName>
+      <value>0</value>
+    </configuration>
+    <configuration name="display_name" values="single" type="string">
+      <displayName>Display Name</displayName>
+      <value>Search People</value>
+    </configuration>
+    <configurationGroup name="display_options">
+      <displayName>Display Options</displayName>
+      <configurationGroup name="Default">
+        <displayName>Default</displayName>
+        <configuration name="Default_submit" values="single" type="string">
+          <displayName>Default Submit</displayName>
+          <value>View</value>
+        </configuration>
+        <configuration name="limit_paginated" values="single" type="string">
+          <displayName>Limit Paginated</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="limit_per_page" values="single" type="string">
+          <displayName>Limit Per Page</displayName>
+          <value>50</value>
+        </configuration>
+        <configuration name="sort_order" values="single" type="string">
+          <displayName>Sort Order</displayName>
+          <value>primary_form+surname,primary_form+firstname</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configuration name="display_order" values="single" type="string">
+      <displayName>Display Order</displayName>
+      <value>pincode+id_num,primary_form+surname,+fullname,primary_form+academic_edu_lev,primary_form+datefirstappointment,last_job+title,last_facility+name,+employee_status,nassit+id_num,last_job+salary_grade,last_person_position+reason,last_job+cadre,primary_form+firstname,primary_form+othername,last_job+department,last_position+job,last_position+title,last_position+facility,last_person_position+start_date,last_person_position+end_date,primary_form+csd_uuid,last_person_position+position,last_position+department,primary_form+nationality,district+name</value>
+    </configuration>
+    <configurationGroup name="fields">
+      <displayName>Fields</displayName>
+      <configurationGroup name="+employee_status">
+        <displayName>+employee Status</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="district+name">
+        <displayName>District Name</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_facility+name">
+        <displayName>Last Facility Name</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_job+cadre">
+        <displayName>Last Job Cadre</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_job+department">
+        <displayName>Last Job Department</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_job+title">
+        <displayName>Last Job Title</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_person_position+end_date">
+        <displayName>Last Person Position End Date</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_person_position+position">
+        <displayName>Last Person Position Position</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_person_position+start_date">
+        <displayName>Last Person Position Start Date</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_position+department">
+        <displayName>Last Position Department</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_position+facility">
+        <displayName>Last Position Facility</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_position+job">
+        <displayName>Last Position Job</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="last_position+title">
+        <displayName>Last Position Title</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+academic_edu_lev">
+        <displayName>Primary Form Academic Edu Lev</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+csd_uuid">
+        <displayName>Primary Form Csd Uuid</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+datefirstappointment">
+        <displayName>Primary Form Datefirstappointment</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+firstname">
+        <displayName>Primary Form Firstname</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+nationality">
+        <displayName>Primary Form Nationality</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+othername">
+        <displayName>Primary Form Othername</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="primary_form+surname">
+        <displayName>Primary Form Surname</displayName>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="nassit+id_num">
+        <displayName>Nassit Id Num</displayName>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="pincode+id_num">
+        <displayName>Pincode Id Num</displayName>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="+fullname">
+        <displayName>+fullname</displayName>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="last_person_position+reason">
+        <displayName>Last Person Position Reason</displayName>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="last_job+salary_grade">
+        <displayName>Last Job Salary Grade</displayName>
+        <configurationGroup name="merges">
+          <displayName>Merges</displayName>
+        </configurationGroup>
+        <configuration name="enabled" values="single" type="string">
+          <displayName>Enabled</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="aggregate" values="single" type="string">
+          <displayName>Aggregate</displayName>
+          <value>none</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configuration name="limit_view_to_task" values="single" type="string">
+      <displayName>Limit View To Task</displayName>
+      <value />
+    </configuration>
+    <configuration name="report" values="single" type="string">
+      <displayName>Report</displayName>
+      <value>search_people</value>
+    </configuration>
+    <configuration name="total" values="single" type="string">
+      <displayName>Total</displayName>
+      <value>0</value>
+    </configuration>
+  </configurationGroup>
+</I2CEConfiguration>

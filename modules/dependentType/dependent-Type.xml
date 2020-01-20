@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="dependent-Type">
+  <metadata>
+    <displayName>Dependent Type</displayName>
+    <description>Employee Dependent Type</description>
+    <category>LOCALISED Modules</category>
+    <version>4.3.0</version>
+    <creator>iHRIS Tanzania</creator>
+    <email>support@zalongwa.com</email>
+  </metadata>
+  <configurationGroup name="dependent-Type" path="/modules/forms/forms/dependenttype">
+    <displayName>DependentType</displayName>
+    <version>4.2.0</version>
+    <configuration name="class" values="single" type="string">
+      <displayName>Class</displayName>
+      <value>I2CE_SimpleList</value>
+    </configuration>
+    <configuration name="display" values="single" type="string">
+      <displayName>Display</displayName>
+      <value>Dependent Type</value>
+    </configuration>
+    <configuration name="read_only" values="single" type="string">
+      <displayName>Read Only</displayName>
+      <value>0</value>
+    </configuration>
+    <configuration name="storage" values="single" type="string">
+      <displayName>Storage</displayName>
+      <value>magicdata</value>
+    </configuration>
+  </configurationGroup>
+</I2CEConfiguration>

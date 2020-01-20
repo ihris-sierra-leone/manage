@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="search_all_peope_rel">
+  <metadata>
+    <displayName>Search All People Relation</displayName>
+    <description>Relationship Search All People</description>
+    <version>4.3.0</version>
+  </metadata>
+  <configurationGroup name="search_all_peope_rel" path="//modules/CustomReports/relationships/search_people">
+    <displayName>Export</displayName>
+    <version>4.2.2.24.2016.09.11</version>
+    <configuration name="description" values="single" type="string">
+      <displayName>Description</displayName>
+      <value>Search relationship for all person records.</value>
+    </configuration>
+    <configuration name="display_name" values="single" type="string">
+      <displayName>Display Name</displayName>
+      <value>Search People</value>
+    </configuration>
+    <configuration name="form" values="single" type="string">
+      <displayName>Form</displayName>
+      <value>person</value>
+    </configuration>
+    <configurationGroup name="joins">
+      <displayName>Joins</displayName>
+      <configurationGroup name="application">
+        <displayName>Application</displayName>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>The application details for this person.</value>
+        </configuration>
+        <configuration name="display_name" values="single" type="string">
+          <displayName>Display Name</displayName>
+          <value>Application</value>
+        </configuration>
+        <configuration name="drop_empty" values="single" type="string">
+          <displayName>Drop Empty</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="form" values="single" type="string">
+          <displayName>Form</displayName>
+          <value>application</value>
+        </configuration>
+        <configuration name="join_style" values="single" type="string">
+          <displayName>Join Style</displayName>
+          <value>child</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="district">
+        <displayName>District</displayName>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>District</value>
+        </configuration>
+        <configuration name="display_name" values="single" type="string">
+          <displayName>Display Name</displayName>
+          <value>District</value>
+        </configuration>
+        <configuration name="form" values="single" type="string">
+          <displayName>Form</displayName>
+          <value>district</value>
+        </configuration>
+        <configurationGroup name="join_data">
+          <displayName>Join Data</displayName>
+          <configuration name="field" values="single" type="string">
+            <displayName>Field</displayName>
+            <value>residence</value>
+          </configuration>
+        </configurationGroup>
+        <configuration name="join_style" values="single" type="string">
+          <displayName>Join Style</displayName>
+          <value>parent_field</value>
+        </configuration>
+        <configuration name="limit_one" values="single" type="string">
+          <displayName>Limit One</displayName>
+          <value>1</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="last_person_position">
+        <displayName>Last Person Position</displayName>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>The last position this person has held.</value>
+        </configuration>
+        <configuration name="display_name" values="single" type="string">
+          <displayName>Display Name</displayName>
+          <value>Last Person Position</value>
+        </configuration>
+        <configuration name="drop_empty" values="single" type="string">
+          <displayName>Drop Empty</displayName>
+          <value>0</value>
+        </configuration>
+        <configuration name="form" values="single" type="string">
+          <displayName>Form</displayName>
+          <value>person_position</value>
+        </configuration>
+        <configurationGroup name="joins">
+          <displayName>Joins</displayName>
+          <configurationGroup name="last_position">
+            <displayName>Last Position</displayName>
+            <configuration name="description" values="single" type="string">
+              <displayName>Description</displayName>
+              <value>The position details for the last position held by this person.</value>
+            </configuration>
+            <configuration name="display_name" values="single" type="string">
+              <displayName>Display Name</displayName>
+              <value>Last Position</value>
+            </configuration>
+            <configuration name="drop_empty" values="single" type="string">
+              <displayName>Drop Empty</displayName>
+              <value>0</value>
+            </configuration>
+            <configuration name="form" values="single" type="string">
+              <displayName>Form</displayName>
+              <value>position</value>
+            </configuration>
+            <configurationGroup name="joins">
+              <displayName>Joins</displayName>
+              <configurationGroup name="last_facility">
+                <displayName>Last Facility</displayName>
+                <configuration name="description" values="single" type="string">
+                  <displayName>Description</displayName>
+                  <value>The last facility where this person worked.</value>
+                </configuration>
+                <configuration name="display_name" values="single" type="string">
+                  <displayName>Display Name</displayName>
+                  <value>Last Facility</value>
+                </configuration>
+                <configuration name="drop_empty" values="single" type="string">
+                  <displayName>Drop Empty</displayName>
+                  <value>0</value>
+                </configuration>
+                <configuration name="form" values="single" type="string">
+                  <displayName>Form</displayName>
+                  <value>facility</value>
+                </configuration>
+                <configurationGroup name="join_data">
+                  <displayName>Join Data</displayName>
+                  <configuration name="field" values="single" type="string">
+                    <displayName>Field</displayName>
+                    <value>facility</value>
+                  </configuration>
+                </configurationGroup>
+                <configuration name="join_style" values="single" type="string">
+                  <displayName>Join Style</displayName>
+                  <value>parent_field</value>
+                </configuration>
+              </configurationGroup>
+              <configurationGroup name="last_job">
+                <displayName>Last Job</displayName>
+                <configuration name="description" values="single" type="string">
+                  <displayName>Description</displayName>
+                  <value>The last job held by this person.</value>
+                </configuration>
+                <configuration name="display_name" values="single" type="string">
+                  <displayName>Display Name</displayName>
+                  <value>Last Job</value>
+                </configuration>
+                <configuration name="drop_empty" values="single" type="string">
+                  <displayName>Drop Empty</displayName>
+                  <value>0</value>
+                </configuration>
+                <configuration name="form" values="single" type="string">
+                  <displayName>Form</displayName>
+                  <value>job</value>
+                </configuration>
+                <configurationGroup name="join_data">
+                  <displayName>Join Data</displayName>
+                  <configuration name="field" values="single" type="string">
+                    <displayName>Field</displayName>
+                    <value>job</value>
+                  </configuration>
+                </configurationGroup>
+                <configuration name="join_style" values="single" type="string">
+                  <displayName>Join Style</displayName>
+                  <value>parent_field</value>
+                </configuration>
+              </configurationGroup>
+            </configurationGroup>
+            <configurationGroup name="join_data">
+              <displayName>Join Data</displayName>
+              <configuration name="field" values="single" type="string">
+                <displayName>Field</displayName>
+                <value>position</value>
+              </configuration>
+            </configurationGroup>
+            <configuration name="join_style" values="single" type="string">
+              <displayName>Join Style</displayName>
+              <value>parent_field</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <configuration name="join_style" values="single" type="string">
+          <displayName>Join Style</displayName>
+          <value>child</value>
+        </configuration>
+        <configurationGroup name="where">
+          <displayName>Where</displayName>
+          <configurationGroup name="data">
+            <displayName>Data</displayName>
+            <configuration name="linked_field" values="single" type="string">
+              <displayName>Linked Field</displayName>
+              <value>parent</value>
+            </configuration>
+          </configurationGroup>
+          <configuration name="field" values="single" type="string">
+            <displayName>Field</displayName>
+            <value>start_date</value>
+          </configuration>
+          <configuration name="operator" values="single" type="string">
+            <displayName>Operator</displayName>
+            <value>FIELD_LIMIT</value>
+          </configuration>
+          <configuration name="style" values="single" type="string">
+            <displayName>Style</displayName>
+            <value>max_parent</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+      <configurationGroup name="pincode">
+        <displayName>Pincode</displayName>
+        <configuration name="limit_one" values="single" type="string">
+          <displayName>Limit One</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="form" values="single" type="string">
+          <displayName>Form</displayName>
+          <value>person_id</value>
+        </configuration>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>PN CODE Information</value>
+        </configuration>
+        <configuration name="display_name" values="single" type="string">
+          <displayName>Display Name</displayName>
+          <value>PIN CODE</value>
+        </configuration>
+        <configuration name="join_style" values="single" type="string">
+          <displayName>Join Style</displayName>
+          <value>child</value>
+        </configuration>
+        <configurationGroup name="ancestral_conditions">
+          <displayName>Ancestral Conditions</displayName>
+        </configurationGroup>
+        <configurationGroup name="where">
+          <displayName>Where</displayName>
+          <configuration name="operator" values="single" type="string">
+            <displayName>Operator</displayName>
+            <value>FIELD_LIMIT</value>
+          </configuration>
+          <configuration name="style" values="single" type="string">
+            <displayName>Style</displayName>
+            <value>equals</value>
+          </configuration>
+          <configuration name="field" values="single" type="string">
+            <displayName>Field</displayName>
+            <value>id_type</value>
+          </configuration>
+          <configurationGroup name="data">
+            <displayName>Data</displayName>
+            <configuration name="value" values="single" type="string">
+              <displayName>Value</displayName>
+              <value>id_type|1</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="joins">
+          <displayName>Joins</displayName>
+        </configurationGroup>
+        <configurationGroup name="join_data">
+          <displayName>Join Data</displayName>
+          <configuration name="displaystyle" values="single" type="string">
+            <displayName>Displaystyle</displayName>
+            <value>default</value>
+          </configuration>
+        </configurationGroup>
+        <configuration name="drop_empty" values="single" type="string">
+          <displayName>Drop Empty</displayName>
+          <value>0</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="nassit">
+        <displayName>Nassit</displayName>
+        <configuration name="limit_one" values="single" type="string">
+          <displayName>Limit One</displayName>
+          <value>1</value>
+        </configuration>
+        <configuration name="form" values="single" type="string">
+          <displayName>Form</displayName>
+          <value>person_id</value>
+        </configuration>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>NASSIT Information</value>
+        </configuration>
+        <configuration name="display_name" values="single" type="string">
+          <displayName>Display Name</displayName>
+          <value>NASSIT</value>
+        </configuration>
+        <configuration name="join_style" values="single" type="string">
+          <displayName>Join Style</displayName>
+          <value>child</value>
+        </configuration>
+        <configurationGroup name="ancestral_conditions">
+          <displayName>Ancestral Conditions</displayName>
+        </configurationGroup>
+        <configurationGroup name="where">
+          <displayName>Where</displayName>
+          <configuration name="operator" values="single" type="string">
+            <displayName>Operator</displayName>
+            <value>FIELD_LIMIT</value>
+          </configuration>
+          <configuration name="style" values="single" type="string">
+            <displayName>Style</displayName>
+            <value>equals</value>
+          </configuration>
+          <configuration name="field" values="single" type="string">
+            <displayName>Field</displayName>
+            <value>id_type</value>
+          </configuration>
+          <configurationGroup name="data">
+            <displayName>Data</displayName>
+            <configuration name="value" values="single" type="string">
+              <displayName>Value</displayName>
+              <value>id_type|2</value>
+            </configuration>
+          </configurationGroup>
+        </configurationGroup>
+        <configurationGroup name="joins">
+          <displayName>Joins</displayName>
+        </configurationGroup>
+        <configurationGroup name="join_data">
+          <displayName>Join Data</displayName>
+          <configuration name="displaystyle" values="single" type="string">
+            <displayName>Displaystyle</displayName>
+            <value>default</value>
+          </configuration>
+        </configurationGroup>
+        <configuration name="drop_empty" values="single" type="string">
+          <displayName>Drop Empty</displayName>
+          <value>0</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="reporting_functions">
+      <displayName>Reporting Functions</displayName>
+      <configurationGroup name="employee_status">
+        <displayName>Employee Status</displayName>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>The current status of this employee</value>
+        </configuration>
+        <configuration name="formfield" values="single" type="string">
+          <displayName>Formfield</displayName>
+          <value>MAP</value>
+        </configuration>
+        <configuration name="qry" values="single" type="string">
+          <displayName>Qry</displayName>
+          <value>CASE WHEN `last_person_position+end_date` IS NOT NULL AND `last_person_position+end_date` != '0000-00-00 00:00:00' THEN 'employee_status|old_employee' WHEN `application+position` IS NOT NULL AND `application+position` != '' THEN 'employee_status|applicant' WHEN `last_person_position+start_date` IS NOT NULL THEN 'employee_status|employee' ELSE 'employee_status|old_applicant' END</value>
+        </configuration>
+      </configurationGroup>
+      <configurationGroup name="fullname">
+        <displayName>Fullname</displayName>
+        <configuration name="qry" values="single" type="string">
+          <displayName>Qry</displayName>
+          <value>CONCAT_WS(' ',`primary_form+firstname`,`primary_form+othername`,`primary_form+surname`)</value>
+        </configuration>
+        <configuration name="description" values="single" type="string">
+          <displayName>Description</displayName>
+          <value>Return full name</value>
+        </configuration>
+        <configuration name="formfield" values="single" type="string">
+          <displayName>Formfield</displayName>
+          <value>STRING_LINE</value>
+        </configuration>
+      </configurationGroup>
+    </configurationGroup>
+    <configurationGroup name="where">
+      <displayName>Where</displayName>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

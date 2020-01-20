@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE I2CEConfiguration SYSTEM "I2CE_Configuration.dtd">
+<I2CEConfiguration name="PersPosition">
+  <metadata>
+    <displayName>Liberia Manage Person Position</displayName>
+    <category>Site</category>
+    <description>Adds a position which is linked to a person and is defined by a job,</description>
+    <creator>Intrahealth Informatics</creator>
+    <email>hris@capacityproject.org</email>
+    <link>https://launchpad.net/ihris-manage-liberia</link>
+    <version>4.3.0</version>
+    <path name="classes">
+      <value>./lib</value>
+    </path>
+    <path name="templates">
+      <value>./templates</value>
+    </path>
+    <priority>400</priority>
+    <requirement name="ihris-manage-PersonPosition">
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
+    </requirement>
+  </metadata>
+  <configurationGroup name="ihris-manage-PersonPosition" path="/I2CE">
+    <configurationGroup name="page">
+      <configurationGroup name="make_offer">
+        <displayName>Make Offer Page</displayName>
+        <description>The page 'make_offer' which has the action of: Make a Job Offer</description>
+        <configuration name="class" values="single" type="string">
+          <displayName>Page Class</displayName>
+          <description>The class responsible for displaying this page</description>
+          <status>required:true</status>
+          <value>iHRIS_PageFormMakeOffer</value>
+        </configuration>
+        <configuration name="style" values="single" type="string">
+          <displayName>Page Style</displayName>
+          <description>The Page Style</description>
+          <value>ihris_manage_page_form_parent_person</value>
+        </configuration>
+        <configurationGroup name="args">
+          <displayName>Page Options</displayName>
+          <description>The options that control the access and display of all pages</description>
+          <configuration name="title" values="single" locale="en_US" type="string">
+            <displayName>Page Title</displayName>
+            <description>Page Title</description>
+            <status>required:true</status>
+            <value>Make a Job Offer</value>
+          </configuration>
+          <configuration name="page_form" values="single" type="string">
+            <displayName>Form</displayName>
+            <description>The form this page is using</description>
+            <status>required:true</status>
+            <value>make_offer</value>
+          </configuration>
+          <configuration name="allow_new_position" values="single" type="string">
+            <value>true</value>
+          </configuration>
+          <configuration name="allow_new_position_tab" values="single" type="string">
+            <value>true</value>
+          </configuration>
+        </configurationGroup>
+      </configurationGroup>
+    </configurationGroup>
+  </configurationGroup>
+</I2CEConfiguration>

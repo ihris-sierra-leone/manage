@@ -1,0 +1,45 @@
+<div task='can_view_person_leave_request'>
+  <div class="editRecord">
+    <p>Edit This Information</p>
+    <ul>
+      <span >
+	<li  task='can_edit_person_leave_request'>
+	  <span  type="form"
+		 name="leave_request:id"
+		 href="leave_request?id="
+		 parent='true'>
+	    Correct this Information
+	  </span>
+      <span  type="form"
+             name="leave_request:id"
+             href="leave_request?id="
+             parent='true'>
+       Leave Application Letter
+    </span>
+    <span  type="form"
+		 name="leave_request:id"
+		 href="leave_approval?leave_request="
+     ifset="leave_request:leave_status" ifvalue="!leave_status|approved"
+		 parent='true'>
+	    Approve Leave
+	  </span>
+	</li>
+      </span>
+    </ul>
+  </div> <!-- editRecord -->
+
+  <div class="dataTable">
+    <table border="0" cellspacing="0" cellpadding="0">
+      <tr>
+	<th colspan="2">Leave Request</th>
+      </tr>
+        <span type='form' name="leave_request:leave_category" showhead="default"></span>
+        <span type='form' name="leave_request:start_date" showhead="default"></span>
+        <span type='form' name="leave_request:end_date" showhead="default"></span>
+        <span type='form' name="leave_request:leave_days" showhead="default"></span>
+        <span type='form' name="leave_request:return_date" showhead="default"></span>
+        <span type='form' name="leave_request:notes" showhead="default"></span>
+        <span type='form' name="leave_request:leave_status" showhead="default"></span>
+    </table>
+  </div> <!-- dataTable -->
+</div>
