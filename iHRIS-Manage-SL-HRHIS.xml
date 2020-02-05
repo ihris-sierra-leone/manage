@@ -165,7 +165,7 @@
     <enable name="messageHandler" />
     <enable name="name-Titles" />
     <enable name="person-Information" />
-    <enable name="customised-Village" />
+    <!-- <enable name="customised-Village" /> -->
     <enable name="establishment" />
     <enable name="customised-DutyPost" />
     <enable name="customised-LastPromotion" />

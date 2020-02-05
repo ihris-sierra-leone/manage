@@ -14,8 +14,8 @@
       <value>./configs</value>
     </path>
     <requirement name="Geography">
-      <atLeast version="4.1" />
-      <lessThan version="4.2" />
+      <atLeast version="4.3" />
+      <lessThan version="4.4" />
     </requirement>
     <path name="classes">
       <value>./lib</value>
@@ -27,7 +27,7 @@
   </metadata>
   <configurationGroup name="customised-Village" path="/I2CE">
     <configurationGroup name="tasks" path="/I2CE/tasks/task_description" locale="en_US">
-      <version>4.2.0</version>
+      <version>4.3.0</version>
       <configuration name="can_edit_database_list_village" locale="en_US" values="single" type="string">
         <value>Can edit village list</value>
       </configuration>
@@ -36,7 +36,7 @@
       </configuration>
     </configurationGroup>
     <configurationGroup name="tasks_trickle_down" path="/I2CE/tasks/task_trickle_down/">
-      <version>4.2.0</version>
+      <version>4.3.0</version>
       <configuration name="can_edit_database_list_village" values="many" type="string">
         <value>can_edit_geographic_database_lists</value>
         <value>can_view_database_list_village</value>
