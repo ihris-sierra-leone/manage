@@ -1,3 +1,4 @@
 pages/config.values.php
 pages/.htaccess
 *.DS_Store
+templates/en_US/intro.html
