@@ -523,7 +523,7 @@ class iHRIS_CSDCache extends I2CE_Fuzzy{
             if (array_key_exists($list,$requested_oids)) {
                 $oids[$list] = ($oid = $requested_oids[$list]);
             } else {
-            //    $oids[$list] = (  $oid = iHRIS_CSDCache::generateUUIDasOID());
+                $oids[$list] = (  $oid = iHRIS_CSDCache::generateUUIDasOID());
             }
             if (!I2CE_MagicDataNode::checkKey($oid)) {
                 I2CE::raiseError("Invalid OID: $oid");
